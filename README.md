@@ -4,7 +4,7 @@ $ npm install spdx-exceptions
 
 ```javascript
 var assert = require('assert')
-var spdxExceptions = require('./')
+var spdxExceptions = require('spdx-exceptions')
 
 assert(
   Array.isArray(spdxExceptions),

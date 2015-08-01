@@ -6,7 +6,7 @@
   "repository": "kemitchell/spdx-exceptions.js",
   "license": "CC-BY-SA-3.0",
   "scripts": {
-    "test": "defence -i javascript README.md | node"
+    "test": "defence -i javascript README.md | sed 's!spdx-exceptions!./!' | node"
   },
   "devDependencies": {
     "defence-cli": "^1.0.1"
