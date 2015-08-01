@@ -1,6 +1,6 @@
 {
   "name": "spdx-exceptions",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "list of SPDX standard license exceptions",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "repository": "kemitchell/spdx-exceptions.js",
