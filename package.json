@@ -2,9 +2,9 @@
   "name": "spdx-exceptions",
   "version": "1.0.0",
   "description": "list of SPDX standard license exceptions",
-  "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
+  "author": "The Linux Foundation",
   "repository": "kemitchell/spdx-exceptions.js",
-  "license": "CC-BY-SA-3.0",
+  "license": "CC-BY-3.0",
   "scripts": {
     "test": "defence -i javascript README.md | sed 's!spdx-exceptions!./!' | node"
   },
