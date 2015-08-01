@@ -1,6 +1,6 @@
 {
   "name": "spdx-exceptions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "list of SPDX standard license exceptions",
   "author": "The Linux Foundation",
   "repository": "kemitchell/spdx-exceptions.js",
