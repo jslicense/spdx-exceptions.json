@@ -1,7 +1,3 @@
-```shellsession
-$ npm install spdx-exceptions
-```
-
 ```javascript
 var assert = require('assert')
 var spdxExceptions = require('spdx-exceptions')
