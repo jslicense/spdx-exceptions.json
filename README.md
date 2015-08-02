@@ -2,16 +2,12 @@
 var assert = require('assert')
 var spdxExceptions = require('spdx-exceptions')
 
-assert(
-  Array.isArray(spdxExceptions),
-  'module is an Array')
+assert(Array.isArray(spdxExceptions))
 
-assert(
-  spdxExceptions.length > 0,
-  'the Array has elements')
+assert(spdxExceptions.length > 0)
 
-assert(
-  spdxExceptions.every(function(e) {
-    return typeof e === 'string' }),
-  'each Array element is a string')
+function isString(x) {
+  return typeof x === 'string' }
+
+assert(spdxExceptions.every(isString))
 ```
