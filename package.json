@@ -1,7 +1,7 @@
 {
   "name": "spdx-exceptions",
   "description": "list of SPDX standard license exceptions",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "The Linux Foundation",
   "contributors": [
     "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)"
