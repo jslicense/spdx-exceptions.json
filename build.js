@@ -19,7 +19,9 @@ https.request('https://spdx.org/licenses/exceptions.json', function (response) {
         .map(function (exception) {
           return exception.licenseExceptionId
         })
-        .sort()
+        .sort(function (a, b) {
+          return a.toLowerCase().localeCompare(b.toLowerCase())
+        })
       fs.writeFile(
         'index.json',
         JSON.stringify(output, null, 2),
