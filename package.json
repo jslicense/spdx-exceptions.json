@@ -7,5 +7,11 @@
     "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)"
   ],
   "license": "CC-BY-3.0",
-  "repository": "kemitchell/spdx-exceptions.json"
+  "repository": "kemitchell/spdx-exceptions.json",
+  "files": [
+    "index.json"
+  ],
+  "scripts": {
+    "build": "node build.js"
+  }
 }
