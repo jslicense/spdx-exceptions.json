@@ -24,7 +24,7 @@ https.request('https://spdx.org/licenses/exceptions.json', function (response) {
         })
       fs.writeFile(
         'index.json',
-        JSON.stringify(output, null, 2),
+        JSON.stringify(output, null, 2) + '\n',
         function (error) {
           if (error) throw error
         }
