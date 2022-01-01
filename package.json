@@ -11,6 +11,7 @@
   "files": [
     "index.json"
   ],
+  "main": "index.json",
   "scripts": {
     "build": "node build.js"
   }
