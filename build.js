@@ -1,22 +1,22 @@
 #!/usr/bin/env node
-var fs = require('fs')
-var https = require('https')
+const fs = require('fs')
+const https = require('https')
 
 https.request('https://spdx.org/licenses/exceptions.json', function (response) {
   if (response.statusCode !== 200) {
     console.error('spdx.org responded ' + response.statusCode)
     process.exit(1)
   }
-  var chunks = []
+  const chunks = []
   response
     .on('data', function (chunk) {
       chunks.push(chunk)
     })
     .once('end', function () {
-      var buffer = Buffer.concat(chunks)
-      var parsed = JSON.parse(buffer)
-      var exceptions = []
-      var deprecated = []
+      const buffer = Buffer.concat(chunks)
+      const parsed = JSON.parse(buffer)
+      const exceptions = []
+      const deprecated = []
       parsed.exceptions.forEach(object => {
         const id = object.licenseExceptionId
         if (object.isDeprecatedLicenseId) {
