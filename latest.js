@@ -1,4 +1,5 @@
 const assert = require('assert')
+const order = require('./order')
 
 // Download JSON file from spdx.org.
 require('https').request('https://spdx.org/licenses/exceptions.json')
@@ -23,8 +24,8 @@ require('https').request('https://spdx.org/licenses/exceptions.json')
             identifiers.push(id)
           }
         })
-        identifiers.sort()
-        deprecated.sort()
+        identifiers.sort(order)
+        deprecated.sort(order)
 
         const indexJSON = require('./index')
         const deprecatedJSON = require('./deprecated')

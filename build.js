@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const fs = require('fs')
 const https = require('https')
+const order = require('./order')
 
 https.request('https://spdx.org/licenses/exceptions.json', function (response) {
   if (response.statusCode !== 200) {
@@ -33,6 +34,6 @@ https.request('https://spdx.org/licenses/exceptions.json', function (response) {
 function write (file, list) {
   fs.writeFileSync(
     file + '.json',
-    JSON.stringify(list.sort(), null, 2) + '\n'
+    JSON.stringify(list.sort(order), null, 2) + '\n'
   )
 }
