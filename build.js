@@ -15,19 +15,24 @@ https.request('https://spdx.org/licenses/exceptions.json', function (response) {
     .once('end', function () {
       var buffer = Buffer.concat(chunks)
       var parsed = JSON.parse(buffer)
-      var output = parsed.exceptions
-        .map(function (exception) {
-          return exception.licenseExceptionId
-        })
-        .sort(function (a, b) {
-          return a.toLowerCase().localeCompare(b.toLowerCase())
-        })
-      fs.writeFile(
-        'index.json',
-        JSON.stringify(output, null, 2) + '\n',
-        function (error) {
-          if (error) throw error
+      var exceptions = []
+      var deprecated = []
+      parsed.exceptions.forEach(object => {
+        const id = object.licenseExceptionId
+        if (object.isDeprecatedLicenseId) {
+          deprecated.push(id)
+        } else {
+          exceptions.push(id)
         }
-      )
+      })
+      write('index', exceptions)
+      write('deprecated', deprecated)
     })
 }).end()
+
+function write (file, list) {
+  fs.writeFileSync(
+    file + '.json',
+    JSON.stringify(list.sort(), null, 2) + '\n'
+  )
+}
