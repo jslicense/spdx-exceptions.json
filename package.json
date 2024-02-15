@@ -12,6 +12,7 @@
     "index.json",
     "deprecated.json"
   ],
+  "main": "index.json",
   "scripts": {
     "build": "node build.js",
     "latest": "node latest.js"
